@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>赏金大对决 · 简明指南与访问提示</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', '宋体', 'Times New Roman', serif;
+      background: #faf7f2;
+      color: #2f2e2b;
+      line-height: 1.75;
+      padding: 2rem 1.2rem;
+    }
+
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #fefcf8;
+      padding: 3rem 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+    }
+
+    /* hero 开场短句 */
+    .hero-phrase {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #4f4b43;
+      border-left: 4px solid #b99a7c;
+      padding-left: 1.2rem;
+      margin-bottom: 2.2rem;
+      font-style: italic;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #2f2e2b;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid #e2d9ce;
+      padding-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #3e3a34;
+      margin: 2rem 0 1rem 0;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      text-align: justify;
+    }
+
+    /* 特点列表 —— 使用引用块风格 */
+    .features {
+      background: #f2ede6;
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      padding: 0.55rem 0 0.55rem 1.8rem;
+      position: relative;
+      font-weight: 400;
+      border-bottom: 1px dashed #d6cdc0;
+    }
+
+    .features li:last-child {
+      border-bottom: none;
+    }
+
+    .features li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #8b7a66;
+      font-size: 1.1rem;
+    }
+
+    /* 提示框 / 引用块 */
+    .notice-box {
+      background: #f5efe7;
+      border-left: 6px solid #b99a7c;
+      padding: 1.2rem 1.6rem;
+      margin: 2rem 0;
+      border-radius: 0 12px 12px 0;
+      font-size: 0.95rem;
+      color: #3d3933;
+    }
+
+    .notice-box strong {
+      color: #5b4d3c;
+    }
+
+    /* 内联链接 */
+    a {
+      color: #6b5b47;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #d0c3b4;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    a:hover {
+      color: #2f2e2b;
+      text-decoration-color: #6b5b47;
+    }
+
+    /* 温和结尾区域 */
+    .closing {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2d9ce;
+      font-size: 0.95rem;
+      color: #5d5850;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      .content {
+        padding: 2rem 1.2rem;
+        border-radius: 12px;
+      }
+
+      .hero-phrase {
+        font-size: 1.2rem;
+        padding-left: 1rem;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .features {
+        padding: 1.2rem 1.2rem;
+      }
+
+      .features li {
+        padding-left: 1.5rem;
+      }
+    }
+
+    @media (max-width: 440px) {
+      body {
+        padding: 1rem 0.6rem;
+      }
+
+      .hero-phrase {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="hero-phrase">
+      规则清晰，行动明确 —— 每一次对决都基于真实判断。
+    </div>
+
+    <h1>赏金大对决 · 简明参与指南</h1>
+
+    <p>
+      《赏金大对决》是一个围绕策略与时机展开的线上竞技活动。参与者需在限定的规则框架内，通过分析公开信息与实时状态作出选择，而非依赖随机概率。整个流程强调对线索的解读与节奏把控，适合希望锻炼判断力的用户。
+    </p>
+
+    <p>
+      本站为参与者提供结构化的导航与说明，以便快速理解机制、时间窗口及注意事项。无论你初次接触还是已有经验，都能在这里找到清晰的行动参考。
+    </p>
+
+    <h2>核心特点与操作须知</h2>
+
+    <div class="features">
+      <ul>
+        <li><strong>回合制推进</strong> — 每一轮均设有明确的起止时段，逾期操作无效，请留意站内倒计时提示。</li>
+        <li><strong>信息对称原则</strong> — 所有参与者可获取完全一致的情报面板，不设隐藏或付费解锁内容。</li>
+        <li><strong>单次决策机制</strong> — 每个回合内，每个账户仅能提交一次确认，提交后不可撤回或修改。</li>
+        <li><strong>结果实时公示</strong> — 每轮结束后，系统自动公布匹配数据与最终状态，全程可追溯。</li>
+      </ul>
+    </div>
+
+    <div class="notice-box">
+      <strong>访问提醒：</strong> 请使用最新版主流浏览器（Chrome、Firefox、Edge 等）打开 <a href="https://wild-bountyshowdown.com">赏金大对决</a>，并确保网络连接稳定。页面不兼容 IE 及过时内核浏览器。建议在桌面端或平板横屏下操作，以获得完整的排版与交互反馈。
+    </div>
+
+    <h2>常见问题摘要</h2>
+
+    <p>
+      <strong>是否需要注册？</strong> 是的，首次使用需通过邮箱验证创建账户，无需绑定手机或社交账号。<br>
+      <strong>数据是否保留？</strong> 历史回合记录仅保存最近 30 天，重要信息请自行截图留存。<br>
+      <strong>是否有隐藏规则？</strong> 所有规则均明文展示于站内「规则手册」页，无额外条款。
+    </p>
+
+    <p>
+      若需进一步了解机制细节或查看当前回合状态，可直接前往 <a href="https://wild-bountyshowdown.com">赏金大对决</a> 浏览完整信息面板。建议在参与前通读一遍规则说明，以充分理解回合节奏与判定逻辑。
+    </p>
+
+    <div class="closing">
+      <p>
+        每一步都基于已知信息，结果取决于对时机的理解。保持专注，做出你的选择。
+      </p>
+      <p style="margin-top: 0.4rem; font-style: italic; color: #7d7366;">
+        —— 简明、直接、不冗余。
+      </p>
+    </div>
+  </div>
+</body>
+</html>
