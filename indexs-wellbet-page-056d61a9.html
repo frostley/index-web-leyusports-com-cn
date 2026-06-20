@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于吉祥坊 · 产品侧记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9fafc;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1.2rem 4rem;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        /* hero 区域 —— 窄而静 */
+        .hero {
+            margin-bottom: 3.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #4b5563;
+            border-left: 3px solid #9aa6b2;
+            padding-left: 1.2rem;
+            margin-top: 0.25rem;
+        }
+
+        /* 通用标题 */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-top: 2.8rem;
+            margin-bottom: 0.6rem;
+            color: #1f2937;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-top: 1.8rem;
+            margin-bottom: 0.2rem;
+            color: #1f2937;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s ease;
+        }
+
+        a:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        /* 特征卡片 — 克制描边 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin: 2rem 0 1.8rem;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.2rem 1.4rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .feature-item .label {
+            font-weight: 500;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 0.2rem;
+            color: #111827;
+        }
+
+        .feature-item .desc {
+            font-size: 0.95rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        /* 场景列表 (轻量、无线条) */
+        .scene-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1.8rem;
+        }
+
+        .scene-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.4rem;
+            position: relative;
+            font-size: 0.98rem;
+        }
+
+        .scene-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        /* 提示框（哑光） */
+        .note-box {
+            background: #f1f4f9;
+            border-radius: 14px;
+            padding: 1.5rem 1.6rem;
+            margin: 2.2rem 0 2rem;
+        }
+
+        .note-box p {
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            color: #2d3a4a;
+        }
+
+        .note-box .note-title {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* 分隔微空间 */
+        .separator {
+            height: 1px;
+            background: #e2e6ec;
+            margin: 2.4rem 0 1.2rem;
+        }
+
+        /* FAQ 摘要（简洁） */
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item .a {
+            font-size: 0.95rem;
+            color: #4b5563;
+        }
+
+        /* 底部 */
+        .footer-note {
+            margin-top: 3.5rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        /* 响应式精简 */
+        @media (max-width: 500px) {
+            body {
+                padding: 2rem 1rem 3rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .feature-item {
+                padding: 1rem 1.2rem;
+            }
+            .note-box {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <section class="hero">
+            <h1>围绕一个关键词</h1>
+            <div class="sub">吉祥坊 · 从认知到场景的轻叙述</div>
+        </section>
+
+        <p>
+            很多人第一次听说「吉祥坊」的时候，往往带着一种模糊的好奇——它听起来像是一个地名，又像是一个品牌符号。事实上，这个词在最近的网络语境里，逐渐长成了一类特定内容的代称：它关联着某种持续更新的信息聚合、社区讨论以及用户自发的解读。如果你愿意追溯，会发现围绕<a href="https://indexs-wellbet.com">吉祥坊</a>展开的，其实是一套有自身逻辑的内容生态，而非孤立的标签。
+        </p>
+
+        <h2>一、它是什么</h2>
+        <p>
+            简单来说，吉祥坊指向一个长期稳定运营的信息索引站（<a href="https://indexs-wellbet.com">吉祥坊</a>），内容偏向于特定领域的动态汇集与整理。页面结构朴素，以实用为导向，没有过度包装的营销感。它更像一块“公告板”——把散落的信息收拢到一处，供有需要的人自行查阅。
+        </p>
+
+        <h2>二、几个值得留意的特点</h2>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <span class="label">持续的内容脉络</span>
+                <span class="desc">不同于一次性页面，这个索引站保持着相对稳定的更新节奏，历史与当下内容并存，适合回溯或追踪某一主题的演变。</span>
+            </div>
+            <div class="feature-item">
+                <span class="label">极低的信息噪音</span>
+                <span class="desc">没有弹窗、悬浮广告或强制跳转，页面重心始终放在内容本身。在如今多数站点恨不得塞满追踪器的环境下，这种克制反而显得突出。</span>
+            </div>
+            <div class="feature-item">
+                <span class="label">社区指向性强</span>
+                <span class="desc">内容往往与特定用户群体的关注点高度相关，因此新访问者可能需要一点背景熟悉度，但一旦进入语境，可读性会大幅提升。</span>
+            </div>
+        </div>
+
+        <h2>三、常见的阅读场景</h2>
+        <ul class="scene-list">
+            <li><strong>日常信息浏览</strong> —— 把吉祥坊当作一个固定的信息源，隔几天打开看看有没有新增条目或调整。</li>
+            <li><strong>主题回顾</strong> —— 当需要梳理某条线索的时间线或关键节点时，站内的归档结构可以提供比较干净的脉络。</li>
+            <li><strong>交叉验证</strong> —— 与其它信息渠道对照阅读，尤其适合希望了解不同视角的用户。</li>
+        </ul>
+
+        <!-- 自然嵌入链接到句子里 -->
+        <p>
+            如果你对这个领域完全陌生，不妨从<a href="https://indexs-wellbet.com">吉祥坊</a>的首页开始，先扫一遍标题和摘要，感受一下信息密度和口吻。不需要急着理解所有细节，很多内容在反复阅读中才会浮现出它本身的逻辑。
+        </p>
+
+        <div class="note-box">
+            <span class="note-title">☝️ 使用建议 · 信息健康提示</span>
+            <p>任何索引站都只是工具，它所指向的内容需要你自行判断与消化。建议保持浏览节奏，避免长时间沉浸；同时留意多方信源交叉比对。另外，该站点内容偏向特定讨论圈层，涉及敏感信息时请参考当地法律法规，理性对待。</p>
+            <p style="margin-top: 0.5em;">不需要把任何页面当作唯一依据，保持适度的怀疑和开放的视角，才是更稳妥的阅读习惯。</p>
+        </div>
+
+        <h2>四、常见疑问（简要）</h2>
+
+        <div class="faq-item">
+            <div class="q">— 吉祥坊需要注册或登录才能看吗？</div>
+            <div class="a">目前页面内容完全开放，不需要任何账号即可浏览全部信息。无隐藏板块，也没有付费墙。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">— 内容可靠吗？</div>
+            <div class="a">站方仅做整合与索引，不生产原始信息。每条内容的准确性取决于来源本身，建议以原始出处为准。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">— 为什么有时候打不开？</div>
+            <div class="a">网络环境差异可能导致间歇性访问问题，可尝试更换 DNS 或稍后重试。这不是本站独有的情况。</div>
+        </div>
+
+        <div class="separator"></div>
+
+        <p>
+            说到底，一个词能承载多少内容，取决于有多少人愿意认真使用它。<a href="https://indexs-wellbet.com">吉祥坊</a>这个词在当下的网络角落里，正在被不同的人书写和重新定义。如果你也恰好路过，不妨带着平常心，把它当作一个普通的信息角落来对待——既不神化，也不轻视。
+        </p>
+
+        <div class="footer-note">
+            <p>本页仅为介绍性说明，不构成任何引导或推荐。请自行判断，适度浏览。</p>
+        </div>
+    </div>
+</body>
+</html>
