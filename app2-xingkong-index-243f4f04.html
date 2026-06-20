@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再次遇见 · 星空体育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(145deg, #fae3c6 0%, #f7d5b0 40%, #ecc5a4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            line-height: 1.7;
+            color: #2d241c;
+        }
+
+        .card {
+            max-width: 760px;
+            width: 100%;
+            background: #fffefb;
+            border-radius: 48px 48px 40px 40px;
+            box-shadow: 0 20px 40px -12px rgba(100, 60, 30, 0.25), 0 8px 16px -6px rgba(80, 50, 20, 0.08);
+            padding: 48px 44px 52px;
+            transition: box-shadow 0.25s ease;
+            border: 1px solid rgba(255, 245, 230, 0.5);
+        }
+
+        .card:hover {
+            box-shadow: 0 28px 52px -16px rgba(90, 55, 25, 0.30);
+        }
+
+        /* 柔和暖色点缀 */
+        .accent-line {
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, #da9f6b, #c4844d);
+            border-radius: 6px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #322218;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1.08rem;
+            color: #6f5542;
+            margin-bottom: 36px;
+            border-left: 3px solid #d9a77a;
+            padding-left: 16px;
+            font-weight: 380;
+        }
+
+        .greeting {
+            font-size: 1.04rem;
+            background: #f9f1e8;
+            padding: 20px 24px;
+            border-radius: 28px;
+            margin-bottom: 28px;
+            color: #3d2d21;
+        }
+
+        .greeting strong {
+            font-weight: 500;
+            color: #7a5337;
+        }
+
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px 24px;
+            margin: 32px 0 28px;
+        }
+
+        .high-item {
+            flex: 1 1 180px;
+            background: #fcf6ef;
+            padding: 16px 18px;
+            border-radius: 24px;
+            border: 1px solid #efe3d6;
+        }
+
+        .high-item .icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .high-item h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 4px 0 2px;
+            color: #533f2f;
+        }
+
+        .high-item p {
+            font-size: 0.92rem;
+            color: #6c5644;
+        }
+
+        .usage-note {
+            background: #faf1e7;
+            border-radius: 28px;
+            padding: 20px 24px;
+            margin: 24px 0 28px;
+            font-size: 0.98rem;
+            border-left: 4px solid #cfa16f;
+        }
+
+        .usage-note strong {
+            color: #6d4c31;
+        }
+
+        .faq-mini {
+            margin: 30px 0 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ece2d7;
+            padding-bottom: 10px;
+        }
+
+        .faq-item .q {
+            font-weight: 470;
+            color: #3b2b1e;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .faq-item .q::before {
+            content: "▹";
+            color: #b8855a;
+            font-size: 1.2rem;
+        }
+
+        .faq-item .a {
+            font-size: 0.92rem;
+            color: #625140;
+            margin-top: 4px;
+            padding-left: 22px;
+        }
+
+        .action-sentence {
+            background: #fff7ed;
+            padding: 18px 22px;
+            border-radius: 40px;
+            margin: 26px 0 12px;
+            font-size: 1.02rem;
+            border: 1px solid #eadbcb;
+            text-align: center;
+        }
+
+        .action-sentence a {
+            color: #6d4c31;
+            background: #f2e2d1;
+            text-decoration: none;
+            font-weight: 480;
+            padding: 4px 18px 6px;
+            border-radius: 60px;
+            display: inline-block;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 4px rgba(140, 90, 50, 0.08);
+            border: 1px solid #e3cfba;
+            white-space: nowrap;
+        }
+
+        .action-sentence a:hover {
+            background: #e8d3be;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 12px -6px rgba(110, 70, 30, 0.18);
+        }
+
+        .action-sentence a:active {
+            transform: translateY(0);
+        }
+
+        .closing {
+            font-size: 0.95rem;
+            color: #6b5745;
+            border-top: 1px solid #eee3d7;
+            padding-top: 24px;
+            margin-top: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .closing small {
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 540px) {
+            .card {
+                padding: 32px 22px 36px;
+                border-radius: 32px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .highlights {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .high-item {
+                flex: 1 1 auto;
+            }
+
+            .action-sentence {
+                font-size: 0.96rem;
+            }
+
+            .action-sentence a {
+                white-space: normal;
+                padding: 4px 14px;
+            }
+
+            .closing {
+                flex-direction: column;
+                gap: 8px;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .card {
+                padding: 24px 16px;
+            }
+
+            .action-sentence a {
+                display: block;
+                margin: 6px 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="accent-line"></div>
+    <h1>再访 · 星空体育</h1>
+    <div class="subhead">一份温和的备忘，一种持续的陪伴</div>
+
+    <div class="greeting">
+        <strong>又见面了。</strong> 如果你曾在这里停留过片刻，或许记得那种开阔而安稳的感觉。  
+        星空体育不是一次性的遇见，而是值得反复回来、慢慢熟悉的地方。
+    </div>
+
+    <!-- 亮点卡片 -->
+    <div class="highlights">
+        <div class="high-item">
+            <span class="icon">🌄</span>
+            <h3>沉稳节奏</h3>
+            <p>界面与内容保持一贯的克制，不喧哗，不催促，适合安静浏览。</p>
+        </div>
+        <div class="high-item">
+            <span class="icon">📌</span>
+            <h3>收藏 · 回访</h3>
+            <p>将链接收进书签，像标记一处熟悉的角落，随时可以折返。</p>
+        </div>
+        <div class="high-item">
+            <span class="icon">☕</span>
+            <h3>持续关注</h3>
+            <p>隔段时间回来，总有些细微更新与沉淀，不急于一时。</p>
+        </div>
+    </div>
+
+    <!-- 使用建议 / 场景 -->
+    <div class="usage-note">
+        <strong>💡 慢慢来，比较自在。</strong> 不必刻意寻找某个入口，不妨在午后或夜晚，带着轻松的心情再次打开。  
+        把 <a href="https://app2-xingkong.com" style="color:#7a5337; text-decoration:underline; text-underline-offset:3px; font-weight:480;">星空体育</a> 当作一个可以信赖的坐标，不打扰，却始终在。
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-mini">
+        <div class="faq-item">
+            <div class="q">为什么值得再次访问？</div>
+            <div class="a">因为好的地方值得反复体会。每次回访都可能发现之前忽略的细节，或感受到不同的氛围。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">如何更自然地使用？</div>
+            <div class="a">把它加到浏览器书签或收藏夹，不必刻意安排时间，想到了就来看看，像散步一样。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">内容会有变化吗？</div>
+            <div class="a">会持续调整与补充，但不会为了变化而变动。保持品质与一致性，才是长久之道。</div>
+        </div>
+    </div>
+
+    <!-- 嵌入链接的自然句子 -->
+    <div class="action-sentence">
+        ✦ 如果你还没收藏，现在就可以把 <a href="https://app2-xingkong.com">星空体育</a> 保留下来。  
+        以后随时回来，都不必重新寻找。
+    </div>
+
+    <!-- 底部 -->
+    <div class="closing">
+        <span>温和 · 可信 · 自在</span>
+        <small>只是一次安静的提醒</small>
+    </div>
+</div>
+</body>
+</html>
